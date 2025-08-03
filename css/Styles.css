@@ -5,182 +5,262 @@
     --accent-color: #ff6f61;
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     --border-radius: 12px;
-  }
-  
-  * {
+    --airpods-bg: linear-gradient(135deg, #000000 0%, #333333 100%);
+    --airpods-text: #ffffff;
+    --airpods-button: #0071e3;
+    --airpods-button-hover: #005bb5;
+    --feature-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
     background: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-  }
-  
-  header, footer {
+}
+
+header, footer {
     background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 20px;
     box-shadow: var(--shadow);
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 0;
     backdrop-filter: blur(3px);
     padding: 10px;
     border-radius: var(--border-radius);
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 30px;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, transform 0.2s;
-  }
-  
-  nav a:hover, nav a:focus {
+}
+
+nav a:hover, nav a:focus {
     color: var(--accent-color);
     transform: scale(1.1);
-  }
-  
-  main {
+}
+
+main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px;
-  }
-  
-  section {
+}
+
+section {
     background: #fff;
     border-radius: var(--border-radius);
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: var(--shadow);
-  }
-  
-  table {
+}
+
+.airpods-landing {
+    background: var(--airpods-bg);
+    color: var(--airpods-text);
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.airpods-landing h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.airpods-landing p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.airpods-landing img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+}
+
+.airpods-landing button {
+    background-color: var(--airpods-button);
+    color: var(--airpods-text);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.airpods-landing button:hover, .airpods-landing button:focus {
+    background-color: var(--airpods-button-hover);
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature {
+    background: var(--feature-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 200px;
+    color: var(--airpods-text);
+}
+
+table {
     width: 100%;
     margin-top: 10px;
     border-collapse: collapse;
-  }
-  
-  th, td {
+}
+
+th, td {
     border: 1px solid #444;
     padding: 8px;
     text-align: center;
-  }
-  
-  th {
+}
+
+th {
     background: var(--primary-color);
     color: #fff;
-  }
-  
-  img {
+}
+
+img {
     border-radius: var(--border-radius);
     max-width: 100%;
     height: auto;
     display: block;
     margin: 10px 0;
-  }
-  
-  button, input, select, textarea {
+}
+
+button, input, select, textarea {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
     margin-top: 5px;
     font-family: inherit;
-  }
-  
-  button {
+}
+
+button {
     background: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-  }
-  
-  button:hover, button:focus {
+}
+
+button:hover, button:focus {
     background: var(--accent-color);
     transform: scale(1.05);
-  }
-  
-  audio, video {
+}
+
+audio, video {
     border-radius: var(--border-radius);
     margin: 10px 0;
     width: 100%;
     max-width: 500px;
-  }
-  
-  audio::-webkit-media-controls-panel {
+}
+
+audio::-webkit-media-controls-panel {
     background: var(--primary-color);
     color: #fff;
     border-radius: var(--border-radius);
-  }
-  
-  details {
+}
+
+details {
     background: #f9f9f9;
     padding: 10px;
     border-radius: var(--border-radius);
     margin-top: 10px;
-  }
-  
-  summary {
+}
+
+summary {
     cursor: pointer;
     font-weight: bold;
     color: var(--primary-color);
-  }
-  
-  progress {
+}
+
+progress {
     width: 100%;
     height: 20px;
     margin-top: 10px;
     border-radius: var(--border-radius);
-  }
-  
-  progress::-webkit-progress-bar {
+}
+
+progress::-webkit-progress-bar {
     background: #f0f0f0;
     border-radius: var(--border-radius);
-  }
-  
-  progress::-webkit-progress-value {
+}
+
+progress::-webkit-progress-value {
     background: var(--primary-color);
     border-radius: var(--border-radius);
-  }
-  
-  iframe {
+}
+
+iframe {
     border-radius: var(--border-radius);
     border: 1px solid #777;
-  }
-  
-  /* Mobile responsive */
-  @media (max-width: 768px) {
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
     main {
-      padding: 30px;
+        padding: 30px;
     }
-    section {
-      padding: 20px;
+    section, .airpods-landing {
+        padding: 20px;
     }
     nav ul {
-      gap: 20px;
+        gap: 20px;
     }
-  }
-  
-  @media (max-width: 600px) {
+    .features {
+        gap: 15px;
+    }
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
     main {
-      padding: 20px;
+        padding: 20px;
     }
     nav ul {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
-  }
+    .airpods-landing h2 {
+        font-size: 2em;
+    }
+    .airpods-landing p {
+        font-size: 1em;
+    }
+}
